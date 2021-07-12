@@ -13,7 +13,7 @@ driver.get("https://www.indeed.com/")
 inputElement = driver.find_element_by_xpath("//*[@id='text-input-what']")
 inputElement.send_keys('data scientist')
 inputElement = driver.find_element_by_xpath("//*[@id='text-input-where']")
-inputElement.send_keys('Anywhere')
+inputElement.send_keys('Anywhere').element.submit()
 #print(driver.page_source)
 searchCount = fltright.find_element(By.CSS_SELECTOR, "div[id$='searchCountPages']")
 number = searchCount.text
